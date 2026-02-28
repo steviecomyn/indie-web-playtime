@@ -9,18 +9,24 @@ body {
   padding: 1rem;
 
   // Add Noise
-  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: $noise;
-    opacity: 0.2;
-    z-index: -1;
-    pointer-events: none;
-  }
+  // &::before {
+  //   content: "";
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-image: $noise;
+  //   opacity: 0.2;
+  //   z-index: -1;
+  //   pointer-events: none;
+  // }
+}
+
+#fancy-gradient-bg {
+background-color: hsla(333, 0%, 100%, 1);
+    background-image: radial-gradient(circle at 0% 0%, hsla(64, 82%, 77%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 20% 0%, hsla(5, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 40% 0%, hsla(315, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 60% 0%, hsla(256, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 80% 0%, hsla(191, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 100% 0%, hsla(152, 77%, 74%, 0.35) 3%, transparent 40%);
+    background-blend-mode: normal, normal, normal, normal, normal, normal;
 }
 
 .holy-grail-container {
@@ -29,9 +35,16 @@ body {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
+#CD {
+    background-color: hsla(204, 0%, 100%, 1);
+    background-image: radial-gradient(circle at 0% 0%, hsla(295, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 20% 0%, hsla(236, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 40% 0%, hsla(186, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 60% 0%, hsla(127, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 80% 0%, hsla(62, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 100% 0%, hsla(23, 77%, 74%, 0.35) 3%, transparent 40%);
+    background-blend-mode: normal, normal, normal, normal, normal, normal;
+}
+
 header,
 footer {
   background: #eee;
+  background: orangered;
   padding: 1rem;
   text-align: center;
 }
@@ -45,4 +58,9 @@ footer {
 #main-content {
   background-color: #fff;
   padding: 1rem;
+}
+
+
+.minidisc-widget {
+  width: 320px;
 }

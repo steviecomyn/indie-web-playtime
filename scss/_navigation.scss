@@ -8,11 +8,22 @@ ul.navigation {
       background-color: $frosted-blue;
     }
 
+    span.menu-item-icon {
+      font-size: 20px;
+      margin-right: 6px;
+    }
+
     a {
       text-decoration: none;
       color: $default-text-color;
       display: block;
       padding: 0.25rem;
+
+      svg {
+        height: 16px;
+        fill: black;
+        display: inline-block;
+      }
     }
   }
 }

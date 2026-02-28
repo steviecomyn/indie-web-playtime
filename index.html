@@ -6,7 +6,7 @@
     <title>KiiroHoshi</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
+  <body id="fancy-gradient-bg">
     <div class="holy-grail-container">
       <header>
         <h1>My Homepage lol</h1>
@@ -15,21 +15,541 @@
       <nav id="left-column">
         <h4 class="sidebar-heading">Menu</h4>
         <ul class="navigation">
-          <li class="menu-item"><a href="">Home</a></li>
-          <li class="menu-item"><a href="">About Me</a></li>
-          <li class="menu-item"><a href="">Articles</a></li>
-          <li class="menu-item"><a href="">Games</a></li>
-          <li class="menu-item"><a href="">Links</a></li>
+          <li class="menu-item">
+            <a href=""><span class="menu-item-icon">&#127968;</span>Home</a>
+          </li>
+          <li class="menu-item">
+            <a href=""><span class="menu-item-icon">&#128526;</span>About Me</a>
+          </li>
+          <li class="menu-item">
+            <a href=""><span class="menu-item-icon">&#128211;</span>Articles</a>
+          </li>
+          <li class="menu-item">
+            <a href=""
+              ><span class="menu-item-icon">&#9961;&#65039;</span>Shrines</a
+            >
+          </li>
+          <li class="menu-item">
+            <a href=""><span class="menu-item-icon">&#128278;</span>Links</a>
+          </li>
         </ul>
       </nav>
 
       <main id="main-content">
-        <h2>Site Updates</h2>
+        <div class="two-columns">
+          <div>
+            <h2>Site Updates</h2>
+            <br />
+            <p>
+              <strong>28/02/26</strong> - Hello World! This is the first update
+              on the site, just defining the space right now, but cool stuff to
+              come!
+            </p>
+          </div>
+          <div>
+            <div class="minidisc-widget">
+              <svg
+                id="MiniDisc"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 768 768"
+              >
+                <style>
+                  /* Shared stroke for disc rings */
+                  #OuterDisc,
+                  #DataLayer,
+                  #MetaRing,
+                  #ClampingPlateRing,
+                  #ClampingPlate,
+                  #Label {
+                    stroke: #000;
+                    stroke-width: 0.216;
+                    stroke-miterlimit: 10;
+                  }
+
+                  #OuterDisc {
+                    fill: #f4f4f4;
+                  }
+                  #DataLayer {
+                    fill: url(#discBase);
+                  }
+                  #MetaRing {
+                    fill: #c3c6e2;
+                  }
+                  #ClampingPlateRing {
+                    fill: #939393;
+                  }
+                  #ClampingPlate {
+                    fill: #686868;
+                  }
+
+                  #PlasticShell,
+                  #PlasticShellIndent {
+                    stroke: #6a8aaa;
+                    stroke-width: 0.5669;
+                    stroke-miterlimit: 10;
+                  }
+                  #PlasticShell {
+                    fill: url(#plasticGradient);
+                  }
+                  #PlasticShellIndent {
+                    fill: url(#plasticGradient);
+                  }
+
+                  .plastic-sheen {
+                    fill: url(#plasticSheen);
+                    stroke: none;
+                    pointer-events: none;
+                  }
+
+                  #Label {
+                    fill: #fff;
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                  }
+
+                  #Shutter {
+                    fill: url(#aluminiumGradient);
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                    stroke: #888;
+                    stroke-width: 0.216;
+                    stroke-miterlimit: 10;
+                  }
+
+                  .aluminium-sheen {
+                    fill: url(#aluminiumSheen);
+                    stroke: none;
+                    pointer-events: none;
+                  }
+
+                  /* Arrow polygon in InsertThisEnd group */
+                  #InsertThisEnd polygon:first-child {
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                    stroke: #6a8aaa;
+                    stroke-width: 0.216;
+                    stroke-miterlimit: 10;
+                  }
+
+                  /* Text and logo groups */
+                  #InsertThisEnd,
+                  #Sany {
+                    fill: #6a8aaa;
+                  }
+                  #MDLogo {
+                    fill: #71777a;
+                  }
+                  #InsertThisEnd,
+                  #Sany,
+                  #MDLogo {
+                    opacity: 0.5;
+                  }
+
+                  /* All paths inside MDLogo and the Sany path use evenodd winding */
+                  #MDLogo path,
+                  #Sany {
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                  }
+
+                  /* Override: first MDLogo path (the M letter) uses default nonzero winding */
+                  #MDLogo path:first-child {
+                    fill-rule: nonzero;
+                    clip-rule: nonzero;
+                  }
+
+                  /* Disc rotation — spins around its own centre */
+                  #Disc {
+                    transform-origin: 365px 384px;
+                    animation: spin 1s linear infinite;
+                  }
+
+                  @keyframes spin {
+                    from {
+                      transform: rotate(0deg);
+                    }
+                    to {
+                      transform: rotate(360deg);
+                    }
+                  }
+                </style>
+                <defs>
+                  <mask id="labelMask">
+                    <!-- Black = hidden, White = visible -->
+                    <rect width="100%" height="100%" fill="black" />
+                    <path
+                      d="M98.6,138.2h330.8c4.7,0,8.5,3.8,8.5,8.5v501.4c0,4.2-3.4,7.6-7.6,7.6H84.6
+         c-4.2,0-7.6-3.4-7.6-7.6V160Z"
+                      fill="pink"
+                    />
+                  </mask>
+
+                  <!-- Base silver-to-dark radial, simulating the disc's reflective substrate -->
+                  <radialGradient
+                    id="discBase"
+                    cx="47%"
+                    cy="44%"
+                    r="52%"
+                    fx="38%"
+                    fy="36%"
+                  >
+                    <stop offset="0%" stop-color="#e8eaf6" />
+                    <stop offset="30%" stop-color="#c5c8e8" />
+                    <stop offset="60%" stop-color="#9fa3cc" />
+                    <stop offset="100%" stop-color="#6b6f9e" />
+                  </radialGradient>
+
+                  <!-- Rainbow sweep 1: warm arc (red → yellow → green) -->
+                  <linearGradient
+                    id="rainbow1"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      stop-color="#ff6b6b"
+                      stop-opacity="0.55"
+                    />
+                    <stop
+                      offset="25%"
+                      stop-color="#ffd93d"
+                      stop-opacity="0.45"
+                    />
+                    <stop
+                      offset="50%"
+                      stop-color="#6bcb77"
+                      stop-opacity="0.45"
+                    />
+                    <stop
+                      offset="75%"
+                      stop-color="#4d96ff"
+                      stop-opacity="0.45"
+                    />
+                    <stop
+                      offset="100%"
+                      stop-color="#c77dff"
+                      stop-opacity="0.55"
+                    />
+                  </linearGradient>
+
+                  <!-- Rainbow sweep 2: cool arc offset 90° (cyan → magenta) for layered iridescence -->
+                  <linearGradient
+                    id="rainbow2"
+                    x1="100%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.4" />
+                    <stop
+                      offset="30%"
+                      stop-color="#4d96ff"
+                      stop-opacity="0.3"
+                    />
+                    <stop
+                      offset="60%"
+                      stop-color="#ff6bdf"
+                      stop-opacity="0.35"
+                    />
+                    <stop
+                      offset="100%"
+                      stop-color="#ffd93d"
+                      stop-opacity="0.3"
+                    />
+                  </linearGradient>
+
+                  <!-- Transparent plastic: 45% opaque glassy tint -->
+                  <linearGradient
+                    id="plasticGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      stop-color="#ddeeff"
+                      stop-opacity="0.65"
+                    />
+                    <stop
+                      offset="30%"
+                      stop-color="#cce8ff"
+                      stop-opacity="0.50"
+                    />
+                    <stop
+                      offset="60%"
+                      stop-color="#e8f4ff"
+                      stop-opacity="0.35"
+                    />
+                    <stop
+                      offset="100%"
+                      stop-color="#aaccee"
+                      stop-opacity="0.45"
+                    />
+                  </linearGradient>
+
+                  <!-- Plastic edge highlight: faint bright streak across the top -->
+                  <linearGradient
+                    id="plasticSheen"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7" />
+                    <stop offset="8%" stop-color="#ffffff" stop-opacity="0.0" />
+                    <stop
+                      offset="100%"
+                      stop-color="#ffffff"
+                      stop-opacity="0.0"
+                    />
+                  </linearGradient>
+
+                  <!-- Simple 45deg aluminium gradient -->
+                  <linearGradient
+                    id="aluminiumGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#bcc6cc" />
+                    <stop offset="45%" stop-color="#eeeeee" />
+                    <stop offset="100%" stop-color="#bcc6cc" />
+                  </linearGradient>
+
+                  <!-- Aluminium top specular: bright glint on the top edge -->
+                  <linearGradient
+                    id="aluminiumSheen"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      stop-color="#ffffff"
+                      stop-opacity="0.75"
+                    />
+                    <stop
+                      offset="12%"
+                      stop-color="#ffffff"
+                      stop-opacity="0.0"
+                    />
+                    <stop
+                      offset="100%"
+                      stop-color="#ffffff"
+                      stop-opacity="0.0"
+                    />
+                  </linearGradient>
+
+                  <!-- Radial highlight: bright specular hotspot top-left -->
+                  <radialGradient id="specular" cx="35%" cy="30%" r="45%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6" />
+                    <stop
+                      offset="40%"
+                      stop-color="#ffffff"
+                      stop-opacity="0.15"
+                    />
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                  </radialGradient>
+
+                  <!-- Clip path to constrain all fills to the DataLayer annulus shape -->
+                  <clipPath id="dataLayerClip">
+                    <path
+                      d="M365,97C206.5,97,78,225.5,78,384s128.5,287,287,287s287-128.5,287-287S523.5,97,365,97z M365,535c-83.4,0-151-67.6-151-151s67.6-151,151-151s151,67.6,151,151S448.4,535,365,535z"
+                    />
+                  </clipPath>
+                </defs>
+                <g id="Disc">
+                  <circle id="OuterDisc" cx="365" cy="384" r="302" />
+                  <path
+                    id="DataLayer"
+                    d="M365,97C206.5,97,78,225.5,78,384s128.5,287,287,287s287-128.5,287-287S523.5,97,365,97z M365,535c-83.4,0-151-67.6-151-151s67.6-151,151-151s151,67.6,151,151S448.4,535,365,535z"
+                  />
+                  <!-- Iridescent rainbow layers clipped to annulus -->
+                  <rect
+                    x="78"
+                    y="97"
+                    width="574"
+                    height="574"
+                    fill="url(#rainbow1)"
+                    clip-path="url(#dataLayerClip)"
+                  />
+                  <rect
+                    x="78"
+                    y="97"
+                    width="574"
+                    height="574"
+                    fill="url(#rainbow2)"
+                    clip-path="url(#dataLayerClip)"
+                  />
+                  <rect
+                    x="78"
+                    y="97"
+                    width="574"
+                    height="574"
+                    fill="url(#specular)"
+                    clip-path="url(#dataLayerClip)"
+                  />
+                  <path
+                    id="MetaRing"
+                    d="M365,247c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137S440.7,247,365,247z M365,469c-46.9,0-85-38.1-85-85s38.1-85,85-85s85,38.1,85,85S411.9,469,365,469z"
+                  />
+                  <path
+                    id="ClampingPlateRing"
+                    d="M365,307c-42.5,0-77,34.5-77,77c0,42.5,34.5,77,77,77s77-34.5,77-77C442,341.5,407.5,307,365,307z M365,436c-28.7,0-52-23.3-52-52c0-28.7,23.3-52,52-52s52,23.3,52,52C417,412.7,393.7,436,365,436z"
+                  />
+                  <path
+                    id="ClampingPlate"
+                    d="M365,332c-28.7,0-52,23.3-52,52c0,28.7,23.3,52,52,52s52-23.3,52-52C417,355.3,393.7,332,365,332z M365,396c-6.6,0-12-5.4-12-12s5.4-12,12-12s12,5.4,12,12S371.6,396,365,396z"
+                  />
+                </g>
+                <path
+                  id="PlasticShell"
+                  d="M80.4,63.5h607.1c19.7,0,35.8,16.1,35.8,35.8v193.9h-7.6v363.9h7.6V696c0,4.7-3.8,8.5-8.5,8.5H53.1c-4.7,0-8.5-3.8-8.5-8.5V99.3C44.6,79.6,60.7,63.5,80.4,63.5z"
+                />
+                <path
+                  class="plastic-sheen"
+                  d="M80.4,63.5h607.1c19.7,0,35.8,16.1,35.8,35.8v193.9h-7.6v363.9h7.6V696c0,4.7-3.8,8.5-8.5,8.5H53.1c-4.7,0-8.5-3.8-8.5-8.5V99.3C44.6,79.6,60.7,63.5,80.4,63.5z"
+                />
+                <path
+                  id="Label"
+                  d="M98.6,138.2h330.8c4.7,0,8.5,3.8,8.5,8.5v501.4c0,4.2-3.4,7.6-7.6,7.6H84.6c-4.2,0-7.6-3.4-7.6-7.6V160L98.6,138.2L98.6,138.2z"
+                />
+                <g id="InsertThisEnd">
+                  <polygon
+                    points="108.6,93.4 113.3,104.7 118,116 108.6,116 99.2,116 103.9,104.7"
+                  />
+                  <polygon
+                    points="127.3,117.3 127.3,106.6 129.5,106.6 129.5,117.3"
+                  />
+                  <polygon
+                    points="131.6,117.3 131.6,106.6 133.7,106.6 138.2,113.7 138.2,106.6 140.2,106.6 140.2,117.3 138,117.3 133.6,110.2 133.6,117.3"
+                  />
+                  <path
+                    d="M141.9,113.8l2.1-0.2c0.1,0.7,0.4,1.2,0.8,1.6c0.4,0.3,0.9,0.5,1.6,0.5c0.7,0,1.2-0.1,1.6-0.4c0.4-0.3,0.5-0.6,0.5-1c0-0.3-0.1-0.5-0.2-0.6c-0.1-0.2-0.4-0.3-0.8-0.5c-0.3-0.1-0.8-0.2-1.7-0.5c-1.2-0.3-2-0.6-2.5-1.1c-0.7-0.6-1-1.3-1-2.2c0-0.5,0.2-1.1,0.5-1.5c0.3-0.5,0.8-0.8,1.3-1.1s1.3-0.4,2.1-0.4c1.4,0,2.4,0.3,3.1,0.9c0.7,0.6,1,1.4,1.1,2.4l-2.2,0.1c-0.1-0.6-0.3-1-0.6-1.2c-0.3-0.2-0.8-0.4-1.4-0.4c-0.6,0-1.1,0.1-1.5,0.4c-0.2,0.2-0.3,0.4-0.3,0.7c0,0.3,0.1,0.5,0.3,0.7c0.3,0.2,0.9,0.5,2,0.7c1.1,0.2,1.8,0.5,2.3,0.8c0.5,0.3,0.9,0.6,1.2,1.1c0.3,0.5,0.4,1,0.4,1.7c0,0.6-0.2,1.2-0.5,1.7c-0.3,0.5-0.8,0.9-1.5,1.2c-0.6,0.3-1.4,0.4-2.4,0.4c-1.4,0-2.4-0.3-3.2-0.9C142.5,115.9,142.1,115,141.9,113.8z"
+                  />
+                  <polygon
+                    points="152.6,117.3 152.6,106.6 160.6,106.6 160.6,108.4 154.8,108.4 154.8,110.7 160.2,110.7 160.2,112.6 154.8,112.6 154.8,115.5 160.8,115.5 160.8,117.3"
+                  />
+                  <path
+                    d="M162.7,117.3v-10.7h4.6c1.2,0,2,0.1,2.5,0.3c0.5,0.2,0.9,0.5,1.3,1c0.3,0.5,0.5,1.1,0.5,1.7c0,0.8-0.2,1.5-0.7,2c-0.5,0.5-1.2,0.9-2.1,1c0.5,0.3,0.9,0.6,1.2,0.9c0.3,0.3,0.7,0.9,1.2,1.7l1.3,2.1h-2.6l-1.6-2.3c-0.6-0.8-0.9-1.4-1.2-1.6c-0.2-0.2-0.4-0.4-0.7-0.4c-0.2-0.1-0.6-0.1-1.1-0.1h-0.4v4.5C164.9,117.3,162.7,117.3,162.7,117.3z M164.9,111.1h1.6c1,0,1.7,0,2-0.1c0.3-0.1,0.5-0.2,0.6-0.5c0.1-0.2,0.2-0.5,0.2-0.8c0-0.4-0.1-0.7-0.3-0.9c-0.2-0.2-0.5-0.4-0.8-0.4c-0.2,0-0.7,0-1.6,0h-1.7V111.1z"
+                  />
+                  <polygon
+                    points="176,117.3 176,108.4 172.8,108.4 172.8,106.6 181.4,106.6 181.4,108.4 178.2,108.4 178.2,117.3"
+                  />
+                  <polygon
+                    points="189.4,117.3 189.4,108.4 186.2,108.4 186.2,106.6 194.8,106.6 194.8,108.4 191.6,108.4 191.6,117.3"
+                  />
+                  <polygon
+                    points="196.2,117.3 196.2,106.6 198.4,106.6 198.4,110.8 202.7,110.8 202.7,106.6 204.9,106.6 204.9,117.3 202.7,117.3 202.7,112.6 198.4,112.6 198.4,117.3"
+                  />
+                  <polygon
+                    points="207.1,117.3 207.1,106.6 209.3,106.6 209.3,117.3"
+                  />
+                  <path
+                    d="M210.8,113.8l2.1-0.2c0.1,0.7,0.4,1.2,0.8,1.6c0.4,0.3,0.9,0.5,1.6,0.5c0.7,0,1.2-0.1,1.6-0.4c0.4-0.3,0.5-0.6,0.5-1c0-0.3-0.1-0.5-0.2-0.6c-0.1-0.2-0.4-0.3-0.8-0.5c-0.3-0.1-0.8-0.2-1.7-0.5c-1.2-0.3-2-0.6-2.5-1.1c-0.7-0.6-1-1.3-1-2.2c0-0.5,0.2-1.1,0.5-1.5c0.3-0.5,0.8-0.8,1.3-1.1c0.6-0.2,1.3-0.4,2.1-0.4c1.4,0,2.4,0.3,3.1,0.9c0.7,0.6,1,1.4,1.1,2.4l-2.2,0.1c-0.1-0.6-0.3-1-0.6-1.2c-0.3-0.2-0.8-0.4-1.4-0.4c-0.6,0-1.1,0.1-1.5,0.4c-0.2,0.2-0.3,0.4-0.3,0.7c0,0.3,0.1,0.5,0.3,0.7c0.3,0.2,0.9,0.5,2,0.7c1.1,0.2,1.8,0.5,2.3,0.8c0.5,0.3,0.9,0.6,1.2,1.1c0.3,0.5,0.4,1,0.4,1.7c0,0.6-0.2,1.2-0.5,1.7c-0.3,0.5-0.8,0.9-1.5,1.2c-0.6,0.3-1.4,0.4-2.4,0.4c-1.4,0-2.4-0.3-3.2-0.9C211.4,115.9,210.9,115,210.8,113.8z"
+                  />
+                  <polygon
+                    points="225.6,117.3 225.6,106.6 233.6,106.6 233.6,108.4 227.8,108.4 227.8,110.7 233.2,110.7 233.2,112.6 227.8,112.6 227.8,115.5 233.8,115.5 233.8,117.3"
+                  />
+                  <polygon
+                    points="235.7,117.3 235.7,106.6 237.8,106.6 242.3,113.7 242.3,106.6 244.3,106.6 244.3,117.3 242.1,117.3 237.7,110.2 237.7,117.3"
+                  />
+                  <path
+                    d="M246.6,106.6h4c0.9,0,1.6,0.1,2.1,0.2c0.6,0.2,1.2,0.5,1.6,1c0.5,0.5,0.8,1.1,1,1.7c0.2,0.7,0.4,1.5,0.4,2.5c0,0.9-0.1,1.6-0.3,2.3c-0.3,0.8-0.7,1.4-1.2,1.9c-0.4,0.4-0.9,0.7-1.5,0.9c-0.5,0.2-1.1,0.2-1.9,0.2h-4.1V106.6z M248.8,108.4v7.1h1.6c0.6,0,1,0,1.3-0.1c0.4-0.1,0.6-0.2,0.9-0.4c0.2-0.2,0.4-0.6,0.6-1c0.1-0.5,0.2-1.1,0.2-2c0-0.8-0.1-1.5-0.2-1.9c-0.1-0.4-0.4-0.8-0.6-1c-0.3-0.2-0.6-0.4-1-0.5c-0.3-0.1-0.9-0.1-1.8-0.1C249.8,108.4,248.8,108.4,248.8,108.4z"
+                  />
+                </g>
+                <path
+                  id="PlasticShellIndent"
+                  d="M472.4,293.2h243.4v364H471.5c-10.4,0-18.9-8.5-18.9-18.9V313C452.6,302.1,461.5,293.2,472.4,293.2L472.4,293.2z"
+                />
+                <path
+                  class="plastic-sheen"
+                  d="M472.4,293.2h243.4v364H471.5c-10.4,0-18.9-8.5-18.9-18.9V313C452.6,302.1,461.5,293.2,472.4,293.2L472.4,293.2z"
+                />
+                <path
+                  id="Shutter"
+                  d="M474.9,296.8h246.8v181.4H474.9c-10.4,0-18.9-8.5-18.9-18.9V315.6C456.1,305.2,464.6,296.8,474.9,296.8L474.9,296.8z"
+                />
+                <path
+                  class="aluminium-sheen"
+                  d="M474.9,296.8h246.8v181.4H474.9c-10.4,0-18.9-8.5-18.9-18.9V315.6C456.1,305.2,464.6,296.8,474.9,296.8L474.9,296.8z"
+                />
+                <g id="MDLogo">
+                  <path
+                    d="M616.6,368.3c-1.9,7.7-6,19.5-6,19.5l-7.9,0c0,0-3-10.2-4.9-16.7c-1.5-4.9-3.4-13.3-3.4-13.3l0,30h-7.7l-0.1-38.4h12.4c0.5,1.5,3.2,10.1,4.5,14.7c2.6,9,3.1,14.4,3.1,14.4s0.1-5.7,3.1-14.7c1.5-4.5,4.3-14.5,4.3-14.5h12.6v38.5H619l-0.1-30.3C618.9,357.5,617.6,364.1,616.6,368.3L616.6,368.3z"
+                  />
+                  <path
+                    d="M611.2,425.1c0,0.8-0.7,1.8-2.1,1.7h-14.6v-28.9l14.6,0c1.7-0.1,2.1,0.8,2.1,1.6V425.1z M586.8,433.9h19.8c4.6,0,12.3-2.1,12.3-12.3V403c-0.3-10.2-7.7-12.3-12.3-12.3h-19.8V433.9L586.8,433.9z"
+                  />
+                  <path
+                    d="M651.2,367.9v17.6h-4l0.1-17.3c0-2.3,2.2-4.6,4.9-4.6h9.9c2.7,0,5.1,2.1,5.1,4.6l0,17.3H663v-17.6H651.2L651.2,367.9z M652.2,361.4c-4,0-7.2,3-7.2,6.8l0,0.9l-0.1,18.7l8.8,0l0.1-17.7h7.1l-0.1,17.7l8.8,0l0-18.7l0-0.9c0-3.5-3.5-6.8-7.4-6.8H652.2L652.2,361.4z"
+                  />
+                  <path
+                    d="M642.3,416v-7.3h13.5v-4.3h-13.7c-2.7,0-3.7,1.8-3.7,3.7v8c0,3.3,1.6,4,3.7,4h9.9v7.2h-13.3v4.3h13.8c2.7,0,3.8-1.7,3.8-3.7V420c0-2.6-1.5-4-3.8-4L642.3,416L642.3,416z M644.8,413.8h7.8c4.9,0,5.9,3.6,5.9,6.1v7.8c0,4.7-3.4,6.3-6.2,6.3h-15.8v-8.8h13.3v-2.8c0,0-2.8,0-7.9,0c-5.1,0-5.9-3.8-5.9-6.3v-7.9c0-4.6,3.5-5.8,5.9-5.8h16.1v8.7h-13.2V413.8z"
+                  />
+                  <path
+                    d="M664.1,408c0-2.7,1.9-3.6,3.9-3.6h12.2v4.2h-12l0,18.7l12.3,0l0,4.1H668c-2,0-3.9-1-3.9-3.3V408z M661.8,428c0,4.1,3.2,5.9,6.3,5.9h14.6l0-8.8h-12.1V411h12.1l0-8.8h-14.6c-3.6,0-6.3,1.7-6.3,5.9V428L661.8,428z"
+                  />
+                  <path
+                    d="M676.1,351.2h4.2v4.8h-4.2V351.2z M673.8,349.2h8.8v8.8h-8.8V349.2z"
+                  />
+                  <path
+                    d="M676.2,363.5h4v22h-4V363.5z M673.8,361.4h8.9v26.4h-8.9V361.4z"
+                  />
+                  <path
+                    d="M625.6,392.8h4.2v4.8h-4.2V392.8z M623.2,390.7h8.8v8.8h-8.8V390.7z"
+                  />
+                  <path
+                    d="M625.7,405h4v26.2h-4V405z M623.3,402.4h8.8v31.4h-8.8V402.4z"
+                  />
+                  <path
+                    d="M638.5,392.8h4.2v4.8h-4.2V392.8z M636.1,390.7h8.8v8.8h-8.8V390.7z"
+                  />
+                  <path
+                    d="M651.1,392.8h4.2v4.8h-4.2V392.8z M648.8,390.7h8.8v8.8h-8.8V390.7z"
+                  />
+                  <path
+                    d="M663.8,392.8h4.2v4.8h-4.2V392.8z M661.4,390.7h8.8v8.8h-8.8V390.7z"
+                  />
+                  <path
+                    d="M676.4,392.8h4.2v4.8h-4.2V392.8z M674.1,390.7h8.8v8.8h-8.8V390.7z"
+                  />
+                  <path
+                    d="M571.1,439.3v-97.2c0-7,5.7-12.6,12.6-12.6H685c7,0,12.6,5.7,12.6,12.6l0,97.3c0,7-5.7,12.6-12.6,12.6H583.7C576.7,452,571.1,446.4,571.1,439.3L571.1,439.3L571.1,439.3z M694.8,342.1c0-5.4-4.4-9.8-9.8-9.8H583.7c-5.4,0-9.8,4.4-9.8,9.8v97.3c0,5.4,4.4,9.8,9.8,9.8H685c5.4,0,9.8-4.4,9.8-9.8L694.8,342.1L694.8,342.1z"
+                  />
+                  <path
+                    d="M633.9,351.2h4.2v4.8h-4.2V351.2z M631.5,349.2h8.8v8.8h-8.8V349.2z"
+                  />
+                  <path
+                    d="M634,363.5h4v22h-4V363.5z M631.6,361.4h8.9v26.4h-8.9V361.4z"
+                  />
+                </g>
+                <path
+                  id="Sany"
+                  d="M575,165.9c-6.4,0-12.3-1.9-16.2-5.4c-3-2.7-4.4-6.3-4.4-10c0-3.7,1.5-7.3,4.4-10c3.7-3.3,10.1-5.4,16.2-5.4c6.7,0,12.1,1.7,16.2,5.4c2.9,2.7,4.3,6.3,4.3,10c0,3.6-1.5,7.4-4.3,10C587.4,164,581.4,165.9,575,165.9l0-4.1c3.4,0,6.5-1.2,8.7-3.3c2.2-2.2,3.2-4.8,3.2-8.1c0-3.1-1.1-6-3.2-8.1c-2.2-2.1-5.4-3.3-8.7-3.3c-3.3,0-6.6,1.2-8.7,3.3c-2.1,2.1-3.2,5-3.2,8.1c0,3.1,1.1,6,3.2,8.1c2.2,2.2,5.4,3.3,8.7,3.3L575,165.9L575,165.9z M528.5,135c-3.4,0-7.3,0.6-10.6,2.1c-3,1.4-5.5,3.5-5.5,7.2c0,3.3,2.1,5.2,2,5.1c0.9,0.8,2.3,2.2,6,3c1.7,0.4,5.2,0.9,8.7,1.3c3.5,0.4,7,0.7,8.4,1.1c1.1,0.3,3,0.7,3,2.8c0,2.1-2,2.7-2.3,2.9c-0.3,0.1-2.7,1.2-7,1.2c-3.2,0-6.9-0.9-8.3-1.4c-1.6-0.6-3.3-1.3-4.8-3.2c-0.4-0.5-1-1.8-1-3.1h-3.9v10.8h4.3v-1.5c0-0.2,0.2-0.9,0.9-0.5c0.9,0.4,3.5,1.5,6.3,2c2.3,0.5,3.7,0.8,6.5,0.8c4.6,0,7-0.7,8.7-1.2c1.6-0.5,3.6-1.3,5.2-2.6c0.9-0.7,2.8-2.5,2.8-5.7c0-3.1-1.7-5-2.2-5.6c-0.8-0.8-1.8-1.4-2.8-1.9c-0.9-0.4-2.3-0.9-3.4-1.2c-2.2-0.5-7.2-1.2-9.6-1.5c-2.5-0.3-6.9-0.6-8.6-1.2c-0.5-0.2-1.6-0.7-1.6-1.9c0-0.9,0.5-1.6,1.5-2.2c1.5-1,4.7-1.6,7.9-1.6c3.8,0,7.1,0.9,9.2,1.8c0.7,0.3,1.5,0.8,2.2,1.3c0.7,0.6,1.8,1.8,2.1,3.6h3.5v-9.4h-3.9v1.1c0,0.4-0.4,0.8-1.1,0.4C539.4,137,534.5,135,528.5,135L528.5,135L528.5,135z M613.3,136.7l18.9,17l-0.2-11.5c0-1.5-0.3-2.1-1.9-2.1h-3.6v-3.4h16.1v3.4h-3.5c-1.7,0-1.8,0.5-1.8,2.1l0.3,21.9h-5.5l-21.8-19.4l0,13.8c0,1.5,0.1,2.2,1.6,2.2h3.9v3.4h-15.9v-3.4h3.7c1.4,0,1.3-1.3,1.3-2.3v-16.1c0-1-0.1-2.3-2.3-2.3h-3v-3.4L613.3,136.7L613.3,136.7z M661.1,160.8c0.2,0,0.8,0,1-0.1c0.4-0.1,0.6-0.4,0.7-0.7c0-0.1,0.1-0.6,0.1-0.7l0-5.4c0-0.1,0-0.2-0.2-0.5c-0.2-0.3-9.9-11.3-10.3-11.7c-0.5-0.6-1.5-1.5-3-1.5H646v-3.4h18.9v3.4h-2.3c-0.5,0-0.9,0.5-0.4,1.1c0,0,6.4,7.6,6.4,7.7c0.1,0.1,0.1,0.1,0.2,0c0.1-0.1,6.5-7.7,6.6-7.7c0.3-0.4,0.1-1.1-0.6-1.1h-2.3v-3.4H688v3.4h-3.5c-1.3,0-1.8,0.2-2.7,1.3c-0.4,0.5-10.2,11.6-10.4,11.9c-0.1,0.2-0.1,0.4-0.1,0.5v5.4c0,0.1,0,0.6,0.1,0.7c0.1,0.3,0.4,0.5,0.7,0.7c0.1,0,0.8,0.1,0.9,0.1h3.5v3.4h-18.8v-3.4L661.1,160.8L661.1,160.8L661.1,160.8z"
+                />
+                <image
+                  href="/img/label.jpg"
+                  x="0"
+                  y="0"
+                  width="768"
+                  height="768"
+                  preserveAspectRatio="xMidYMid slice"
+                  mask="url(#labelMask)"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
         <br />
-        <p>
-          <strong>28/02/26</strong> - Hello World! This is the first update on
-          the site, just defining the space right now, but cool stuff to come!
-        </p>
+        <hr />
+        <br />
 
         <hr />
         <p>Random ASCII symbols:<br />≡ ჻ ░ ▒ ▓ ▤ ▥ ▦ ▧ ▨ ▩ █ ▌ ▐ ▀ ▄</p>
@@ -37,7 +557,6 @@
 
       <aside id="right-column">
         <h4 class="sidebar-heading">Widgets</h4>
-        <p>Some snippets etc.</p>
       </aside>
 
       <footer>Created in Notepad (in spirit).</footer>
