@@ -1,3 +1,48 @@
+@import "variables";
+@import "reset";
+@import "layout";
+@import "typography";
+@import "navigation";
+
 body {
-  background-color: pink;
+  background: $body-background;
+  padding: 1rem;
+
+  // Add Noise
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: $noise;
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.holy-grail-container {
+  border-radius: $header-footer-border-radius;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+header,
+footer {
+  background: #eee;
+  padding: 1rem;
+  text-align: center;
+}
+
+#left-column,
+#right-column {
+  background-color: #e4e4e4;
+  padding: 0.5rem;
+}
+
+#main-content {
+  background-color: #fff;
+  padding: 1rem;
 }

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: $default-text-color;
+}
+
+hr {
+  border: 2px solid red;
+  margin: 1rem 0;
+}
+
+h4.sidebar-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+
+  &:before,
+  &:after {
+    content: "♦";
+  }
+}

@@ -1,0 +1,48 @@
+body {
+  display: grid;
+  place-items: center;
+}
+
+.holy-grail-container {
+  display: grid;
+  width: 100%;
+  max-width: 960px;
+  min-height: 100dvh;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header  header"
+    "nav     main    aside"
+    "footer  footer  footer";
+}
+
+// Assign the elements to the areas we named above
+header {
+  grid-area: header;
+}
+nav#left-column {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+aside#right-column {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
+
+@media (max-width: 768px) {
+  .holy-grail-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+  }
+}

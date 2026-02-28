@@ -1,0 +1,18 @@
+ul.navigation {
+  list-style: none;
+
+  li.menu-item {
+    width: 100%;
+
+    &:hover {
+      background-color: $frosted-blue;
+    }
+
+    a {
+      text-decoration: none;
+      color: $default-text-color;
+      display: block;
+      padding: 0.25rem;
+    }
+  }
+}
