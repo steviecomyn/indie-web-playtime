@@ -32,7 +32,7 @@ background-color: hsla(333, 0%, 100%, 1);
 .holy-grail-container {
   border-radius: $header-footer-border-radius;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  // box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 #CD {
@@ -43,8 +43,7 @@ background-color: hsla(333, 0%, 100%, 1);
 
 header,
 footer {
-  background: #eee;
-  background: orangered;
+  background: transparent;
   padding: 1rem;
   text-align: center;
 }

@@ -174,7 +174,6 @@ body {
 .holy-grail-container {
   border-radius: 0.25rem;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 #CD {
@@ -185,8 +184,7 @@ body {
 
 header,
 footer {
-  background: #eee;
-  background: orangered;
+  background: transparent;
   padding: 1rem;
   text-align: center;
 }
