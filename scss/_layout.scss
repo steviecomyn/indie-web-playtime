@@ -34,13 +34,21 @@ footer {
   grid-area: footer;
 }
 
-
 div.two-columns {
   display: flex;
+  gap: 1rem;
 }
 
+@media (max-width: 1080px) {
+  div.two-columns {
+    display: flex;
+    flex-direction: column;
 
-
+    .minidisc-widget-column {
+      width: 100%;
+    }
+  }
+}
 @media (max-width: 768px) {
   .holy-grail-container {
     grid-template-columns: 1fr;

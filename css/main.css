@@ -100,8 +100,18 @@ footer {
 
 div.two-columns {
   display: flex;
+  gap: 1rem;
 }
 
+@media (max-width: 1080px) {
+  div.two-columns {
+    display: flex;
+    flex-direction: column;
+  }
+  div.two-columns .minidisc-widget-column {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .holy-grail-container {
     grid-template-columns: 1fr;
@@ -115,7 +125,7 @@ body {
 }
 
 hr {
-  border: 2px solid red;
+  border: 1px solid rgb(214, 214, 214);
   margin: 1rem 0;
 }
 
@@ -160,6 +170,176 @@ ul.navigation li.menu-item a svg {
   display: inline-block;
 }
 
+.site-updates ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-updates li {
+  position: relative;
+  padding: 0 0 1.5rem 2rem;
+  margin: 0;
+  line-height: 1.6;
+}
+.site-updates li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.36rem;
+  top: 1.4rem;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, #22255, transparent);
+}
+.site-updates li::before {
+  content: "○";
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: #222;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.site-updates li:first-child::before {
+  content: "●";
+  font-size: 0.8rem;
+  color: #222;
+}
+.site-updates li:first-child strong::after {
+  content: "latest";
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1em 0.45em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: green;
+  border-radius: 3px;
+  vertical-align: middle;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+.site-updates li p {
+  margin: 0;
+}
+
+#OuterDisc,
+#DataLayer,
+#MetaRing,
+#ClampingPlateRing,
+#ClampingPlate,
+#Label {
+  stroke: #000;
+  stroke-width: 0.216;
+  stroke-miterlimit: 10;
+}
+
+#OuterDisc {
+  fill: #f4f4f4;
+}
+
+#DataLayer {
+  fill: url(#discBase);
+}
+
+#MetaRing {
+  fill: #c3c6e2;
+}
+
+#ClampingPlateRing {
+  fill: #939393;
+}
+
+#ClampingPlate {
+  fill: #686868;
+}
+
+#PlasticShell,
+#PlasticShellIndent {
+  stroke: #6a8aaa;
+  stroke-width: 0.5669;
+  stroke-miterlimit: 10;
+  fill: url(#plasticGradient);
+}
+
+.plastic-sheen {
+  fill: url(#plasticSheen);
+  stroke: none;
+  pointer-events: none;
+}
+
+#Label {
+  fill: #fff;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
+#Shutter {
+  fill: url(#aluminiumGradient);
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke: #888;
+  stroke-width: 0.216;
+  stroke-miterlimit: 10;
+}
+
+.aluminium-sheen {
+  fill: url(#aluminiumSheen);
+  stroke: none;
+  pointer-events: none;
+}
+
+#InsertThisEnd,
+#Sany {
+  fill: #6a8aaa;
+  opacity: 0.5;
+}
+#InsertThisEnd polygon:first-child,
+#Sany polygon:first-child {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke: #6a8aaa;
+  stroke-width: 0.216;
+  stroke-miterlimit: 10;
+}
+
+#MDLogo {
+  fill: #71777a;
+  opacity: 0.5;
+}
+#MDLogo path {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+#MDLogo path:first-child {
+  fill-rule: nonzero;
+  clip-rule: nonzero;
+}
+
+#Sany {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
+#md-cover-art {
+  filter: contrast(1.05) saturate(0.95);
+}
+
+#Disc {
+  transform-origin: 365px 384px;
+  animation: spin 2s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 body {
   background: #cfbaf0;
   padding: 1rem;
@@ -176,12 +356,6 @@ body {
   overflow: hidden;
 }
 
-#CD {
-  background-color: hsl(204, 0%, 100%);
-  background-image: radial-gradient(circle at 0% 0%, hsla(295, 77%, 74%, 0.35) 3.1210986267%, transparent 40%), radial-gradient(circle at 20% 0%, hsla(236, 77%, 74%, 0.35) 3.1210986267%, transparent 40%), radial-gradient(circle at 40% 0%, hsla(186, 77%, 74%, 0.35) 3.1210986267%, transparent 40%), radial-gradient(circle at 60% 0%, hsla(127, 77%, 74%, 0.35) 3.1210986267%, transparent 40%), radial-gradient(circle at 80% 0%, hsla(62, 77%, 74%, 0.35) 3.1210986267%, transparent 40%), radial-gradient(circle at 100% 0%, hsla(23, 77%, 74%, 0.35) 3%, transparent 40%);
-  background-blend-mode: normal, normal, normal, normal, normal, normal;
-}
-
 header,
 footer {
   background: transparent;
@@ -196,10 +370,18 @@ footer {
 }
 
 #main-content {
-  background-color: #fff;
+  background-color: #f7f7f7;
   padding: 1rem;
 }
 
+.minidisc-widget-column {
+  display: grid;
+  place-items: center;
+}
+
 .minidisc-widget {
-  width: 320px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-width: 320px;
 }/*# sourceMappingURL=main.css.map */

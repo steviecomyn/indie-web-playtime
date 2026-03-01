@@ -1,0 +1,66 @@
+.site-updates {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    position: relative;
+    padding: 0 0 1.5rem 2rem;
+    margin: 0;
+    line-height: 1.6;
+
+    // Thin connecting line between items
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 0.36rem;
+      top: 1.4rem;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, #{$default-text-color}55, transparent);
+    }
+
+    // Default bullet: hollow disc ○
+    &::before {
+      content: '○';
+      position: absolute;
+      left: 0;
+      top: 0.05em;
+      color: $default-text-color;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    // Latest item: filled disc ●
+    &:first-child::before {
+      content: '●';
+      font-size: 0.8rem;
+      color: $default-text-color;
+    }
+
+    // "latest" badge on first item's date
+    &:first-child strong::after {
+      content: 'latest';
+      display: inline-block;
+      margin-left: 0.5rem;
+      padding: 0.1em 0.45em;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: green;
+      border-radius: 3px;
+      vertical-align: middle;
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

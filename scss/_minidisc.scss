@@ -1,0 +1,127 @@
+// ─── MiniDisc SVG Styles ──────────────────────────────────────────────────────
+
+$disc-stroke-color:    #000;
+$disc-stroke-width:    0.216;
+$plastic-stroke-color: #6a8aaa;
+$plastic-stroke-width: 0.5669;
+$text-color:           #6a8aaa;
+$logo-color:           #71777a;
+$text-opacity:         0.5;
+$spin-duration:        2s;
+
+// ─── Disc rings ───────────────────────────────────────────────────────────────
+
+#OuterDisc,
+#DataLayer,
+#MetaRing,
+#ClampingPlateRing,
+#ClampingPlate,
+#Label {
+  stroke: $disc-stroke-color;
+  stroke-width: $disc-stroke-width;
+  stroke-miterlimit: 10;
+}
+
+#OuterDisc         { fill: #f4f4f4; }
+#DataLayer         { fill: url(#discBase); }
+#MetaRing          { fill: #c3c6e2; }
+#ClampingPlateRing { fill: #939393; }
+#ClampingPlate     { fill: #686868; }
+
+// ─── Plastic shell ────────────────────────────────────────────────────────────
+
+#PlasticShell,
+#PlasticShellIndent {
+  stroke: $plastic-stroke-color;
+  stroke-width: $plastic-stroke-width;
+  stroke-miterlimit: 10;
+  fill: url(#plasticGradient);
+}
+
+.plastic-sheen {
+  fill: url(#plasticSheen);
+  stroke: none;
+  pointer-events: none;
+}
+
+// ─── Label ────────────────────────────────────────────────────────────────────
+
+#Label {
+  fill: #fff;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
+// ─── Shutter ──────────────────────────────────────────────────────────────────
+
+#Shutter {
+  fill: url(#aluminiumGradient);
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke: #888;
+  stroke-width: $disc-stroke-width;
+  stroke-miterlimit: 10;
+}
+
+.aluminium-sheen {
+  fill: url(#aluminiumSheen);
+  stroke: none;
+  pointer-events: none;
+}
+
+// ─── Text & logo groups ───────────────────────────────────────────────────────
+
+#InsertThisEnd,
+#Sany {
+  fill: $text-color;
+  opacity: $text-opacity;
+
+  // Arrow polygon only
+  polygon:first-child {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke: $text-color;
+    stroke-width: $disc-stroke-width;
+    stroke-miterlimit: 10;
+  }
+}
+
+#MDLogo {
+  fill: $logo-color;
+  opacity: $text-opacity;
+
+  path {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+
+    // M letter uses nonzero winding
+    &:first-child {
+      fill-rule: nonzero;
+      clip-rule: nonzero;
+    }
+  }
+}
+
+#Sany {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
+// ─── Cover art ────────────────────────────────────────────────────────────────
+
+#md-cover-art {
+  filter: contrast(1.05) saturate(0.95);
+}
+
+// ─── Disc rotation ────────────────────────────────────────────────────────────
+
+#Disc {
+  transform-origin: 365px 384px;
+  animation: spin $spin-duration linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

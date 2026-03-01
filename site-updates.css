@@ -1,0 +1,77 @@
+/* ─── Site Updates ────────────────────────────────────────────────── */
+
+.site-updates ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-updates li {
+  position: relative;
+  padding: 0 0 1.5rem 2rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Thin connecting line between items */
+.site-updates li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 0.36rem;
+  top: 1.4rem;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, #6a8aaa55, transparent);
+}
+
+/* Default bullet: static ▸ chevron */
+.site-updates li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: #6a8aaa;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Latest item: pulsing ▶ play icon */
+.site-updates li:first-child::before {
+  content: '▶';
+  color: #6a8aaa;
+  font-size: 0.8rem;
+  animation: pulse-play 2s ease-in-out infinite;
+}
+
+@keyframes pulse-play {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 0px #6a8aaa;
+  }
+  50% {
+    opacity: 0.5;
+    text-shadow: 0 0 6px #6a8aaa;
+  }
+}
+
+/* "Latest" label on the first item's date */
+.site-updates li:first-child strong::after {
+  content: 'latest';
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1em 0.45em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6a8aaa;
+  border: 1px solid #6a8aaa66;
+  border-radius: 3px;
+  vertical-align: middle;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.site-updates li p {
+  margin: 0;
+}

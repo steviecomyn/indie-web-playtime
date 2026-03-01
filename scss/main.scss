@@ -3,24 +3,12 @@
 @import "layout";
 @import "typography";
 @import "navigation";
+@import "site-updates";
+@import "minidisc";
 
 body {
   background: $body-background;
   padding: 1rem;
-
-  // Add Noise
-  // &::before {
-  //   content: "";
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-image: $noise;
-  //   opacity: 0.2;
-  //   z-index: -1;
-  //   pointer-events: none;
-  // }
 }
 
 #fancy-gradient-bg {
@@ -33,12 +21,6 @@ background-color: hsla(333, 0%, 100%, 1);
   border-radius: $header-footer-border-radius;
   overflow: hidden;
   // box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-}
-
-#CD {
-    background-color: hsla(204, 0%, 100%, 1);
-    background-image: radial-gradient(circle at 0% 0%, hsla(295, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 20% 0%, hsla(236, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 40% 0%, hsla(186, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 60% 0%, hsla(127, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 80% 0%, hsla(62, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%), radial-gradient(circle at 100% 0%, hsla(23, 77%, 74%, 0.35) 3%, transparent 40%);
-    background-blend-mode: normal, normal, normal, normal, normal, normal;
 }
 
 header,
@@ -55,11 +37,18 @@ footer {
 }
 
 #main-content {
-  background-color: #fff;
+  background-color: #f7f7f7;
   padding: 1rem;
 }
 
+.minidisc-widget-column {
+    display: grid;
+  place-items: center;
+}
 
 .minidisc-widget {
-  width: 320px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-width: 320px;
 }
