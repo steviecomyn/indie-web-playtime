@@ -22,8 +22,8 @@ async function syncMinidisc() {
       coverArt.setAttribute("href", artUrl);
 
       // 2. Update Label Text (Truncated for the physical label space)
-      const cleanTitle = track.name.substring(0, 25).toUpperCase();
-      const cleanArtist = track.artist["#text"].substring(0, 28).toUpperCase();
+      const cleanTitle = track.name.substring(0, 21).toUpperCase();
+      const cleanArtist = track.artist["#text"].substring(0, 18).toUpperCase();
 
       titleText.textContent = cleanTitle;
       artistText.textContent = cleanArtist;

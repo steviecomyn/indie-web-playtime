@@ -129,6 +129,23 @@ hr {
   margin: 1rem 0;
 }
 
+p a {
+  display: inline-block;
+  background-color: #cddcf8;
+  text-decoration: none;
+  color: #0652DD;
+  padding: 0 4px;
+  border-bottom: 2px solid #cddcf8;
+}
+p a:hover {
+  border-bottom-color: #0652DD;
+}
+p a:active {
+  background-color: #0652DD;
+  border-bottom-color: #0652DD;
+  color: #fff;
+}
+
 p {
   max-width: 80ch;
 }

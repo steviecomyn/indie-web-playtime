@@ -10,6 +10,25 @@ hr {
   margin: 1rem 0;
 }
 
+p a {
+  display: inline-block;
+  background-color: $default-link-bg-color;
+  text-decoration: none;
+  color: $default-link-text-color;
+  padding: 0 4px;
+  border-bottom: 2px solid $default-link-bg-color;
+
+  &:hover {
+    border-bottom-color: $default-link-text-color;
+  }
+
+  &:active {
+    background-color: $default-link-text-color;
+    border-bottom-color: $default-link-text-color;
+    color: #fff;
+  }
+}
+
 p {
   max-width: 80ch;
 }
